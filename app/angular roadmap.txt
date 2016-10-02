@@ -1,0 +1,24 @@
+1. doorgaan op de weg zoals we die zijn ingeslagen -> pagina's bestelproces omzetten naar 1 angular app genaamd 'create' -> moeten meters blijven maken
+
+2. mogelijk maken in het build proces om meerdere losse angular apps te deployen op verschillende plekken op de site (niet alleen bestelproces) 
+    - er zijn genoeg use-cases te bedenken waar dit voor nodig is, maar ben niet overtuigd dat het nodig is voor het bestelproces nu
+    
+ 
+3. data model basket/selected_order uitdenken create app -> frontend/backend -> syncing/diffs
+
+Wesley/Carina blijven pagina's omzetten naar create, moeten meters blijven maken
+
+Ik ga me komende sprint meer richten op de architectuur van de create-app:
+- zelfde wizzard includen in angular app als in losse bestaande bestelproces pagina's (code duplication)
+- model
+- build/deploy proces van angular apps (meerdere apps/AOT compilation)
+
+
+multiple apps:
+- niet zo makkelijk als Arjen gisteren zei, niet mogelijk om 1 app te builden en dan met meerdere selectoren te werken ->
+    elke app heeft zijn eigen main.ts nodig waarin het goede component aan de goede selector wordt gebootstrapt in de html file 
+    (dus niet mogelijk om zelfde app in te laden en gewoon andere selectors in html te gebruiken voor het goede component
+angular-build directory met daarin alle apps -> elke app eigen html-part (met gebuilde angular componenten) die includebaar is via genshi, zodat 
+bestaande templates maar klein beetje hoeven worden aangepast.
+in angular2-seed moet elke app een folder krijgen in de src, bij het builden moet automatisch alle apps gebuild worden.
+dev build moet nog steeds mogelijk zijn voor 1 enkele app (tijdens developpen wil je niet alle apps constant opnieuw hoeven builden).

@@ -1,0 +1,33 @@
+database-> local storage voor nu -> 
+    - in memmory web api
+    - current_orders met tab_keys en objects 
+    - basket met afgeronde orders/sessies
+    
+
+session storage -> tab keys
+
+keuze pagina -> aantal objecten met aantal props
+
+create proces/page -> selected_order per tab
+
+session page -> kies een sessie als nog geen sessie op tab
+
+main
+routing
+module
+3 componenten
+1 service:
+    - gebruik observables sync methode
+    - log connecties
+
+
+
+
+basket -> afgeronde orders/sessies -> kunnen weer bewerkt worden -> hoe (voor later):
+    1. order uit basket en weer bewerken -> klant bewerkt en bedenkt zich order verdwenen?
+    2. order in basket bewerken (real time automagish) -> klant weet niet wat er gebeurt
+    3. bewerken in nieuwe order, wel referentie naar oude overscrijven als weer in basket wordt gestopt
+
+current orders naar db
+ 
+ 
