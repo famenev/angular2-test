@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { LocalStorageService } from './localstorage.service'
-import { Order } from './models'
-import { TodoStore, Todo} from './todostore.service'
+import { LocalStorageService } from './localstorage.service';
+import { Order } from './models';
+import { TodoStore, Todo} from './todostore.service';
 import {BehaviorSubject, Observable} from "rxjs/Rx";
 
 @Component({

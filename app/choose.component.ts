@@ -2,17 +2,12 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import { Router } from '@angular/router';
 import { DesignService } from './design.service';
 import { Design } from './models';
-import { TodoStore Todo} from './todostore.service';
+import { TodoStore, Todo } from './todostore.service';
 
 @Component({
     selector: 'choose-selector',
     template: `
     <div>
-        <ul>
-        <li *ngFor="let todo of todos">
-            {{todo.id}} {{todo.createdOn}} {{todo.value}}
-        </li>
-    </ul>
     <h1> Kies een kaartje </h1>
     <ul>
         <li *ngFor="let design of designs">

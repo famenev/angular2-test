@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import {Subject} from "rxjs/Subject";
-import {BehaviorSubject Observable} from "rxjs/Rx";
+import {BehaviorSubject, Observable } from "rxjs/Rx";
 import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/filter';

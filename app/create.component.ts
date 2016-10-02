@@ -19,6 +19,11 @@ import 'rxjs/add/operator/startWith';
     selector: 'create-selector',
     template: `
     <div *ngIf="order">
+            <ul>
+        <li *ngFor="let todo of todos">
+            {{todo.id}} {{todo.createdOn}} {{todo.value}}
+        </li>
+    </ul>
     <h1> Editor </h1>
 
         {{order.design.title}}
